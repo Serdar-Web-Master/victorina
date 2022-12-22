@@ -15,7 +15,8 @@ body {
 }
 
 .quiz-container {
-    width: 500px;
+    width: clamp( 1px, 500px ,80%);
+    /* width: 500px; */
     margin: 50px auto;
     background-color: white;
     padding: 15px;
