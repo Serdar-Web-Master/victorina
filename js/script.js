@@ -21,8 +21,8 @@ let indexOfQuestion, //индекс текущего вопроса
     let score = 0; // Итоговый результат викторины
 
      const correctAnswer = document.getElementById("correct-answer"),
-            numberOfAllQuestion2 = document.getElementById("number-of-all-questions-2"),
-            btnTruAgain = document.getElementById("btn-try-again");
+            numberOfAllQuestion2 = document.getElementById("number-of-all-question-2"),
+            btnTryAgain = document.getElementById("btn-try-again");
 
 const questions = [
    {
@@ -136,6 +136,17 @@ const updateAnswerTracker = status => {
    answersTracker.children[indexOfPage - 1].classList.add(`${status}`);
 };
 
+const validate = () => {
+   if(!optionElements[0].classList.contains("disabled")){
+      alert("Вам нужно выбрать один из вариантов ответа");
+   } else {
+      randomQuestion();
+      enableOptions();
+   }
+};
+
+btnNext.addEventListener("click",validate);
+
 const answerTracker = () => {
    questions.forEach(() => {
       const div = document.createElement("div");
@@ -148,8 +159,16 @@ optionElements.forEach(option => {
 })
 
 const quizOver = () => {
-   console.log("over");
+   document.querySelector(".quiz-over-modal").classList.add("active");
+   correctAnswer.innerHTML = score;
+   numberOfAllQuestion2.innerHTML = questions.length
 }
+
+const tryAgain = () => {
+   window.location.reload();
+};
+
+btnTryAgain.addEventListener("click",tryAgain);
 
 window.addEventListener("load",()=>{
    randomQuestion();
