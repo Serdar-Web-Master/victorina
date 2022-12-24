@@ -108,9 +108,11 @@ const checkAnswer = el => {
    console.log(el.target.dataset.id);
    if(el.target.dataset.id == questions[indexOfQuestion].rightAnswer) {
       el.target.classList.add("correct");
+      updateAnswerTracker("correct");
       score++;
    } else {
       el.target.classList.add("wrong");
+      updateAnswerTracker("wrong");
    }
    disabledOptoins();
 }
@@ -128,6 +130,10 @@ const enableOptions = () => {
    optionElements.forEach(item => {
       item.classList.remove("disabled","correct","wrong");
    })
+};
+
+const updateAnswerTracker = status => {
+   answersTracker.children[indexOfPage - 1].classList.add(`${status}`);
 };
 
 const answerTracker = () => {

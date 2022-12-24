@@ -80,7 +80,13 @@ h3 {
 #answers-tracker div{
     width: 30px;
     height: 30px;
-    background-color: #7b87a1;
+    background-color: #b1aeab;
     border-radius: 50%;
     margin-right: 10px;
+}
+#answers-tracker div.correct {
+    background-color: green;
+}
+#answers-tracker div.wrong {
+    background-color: rgb(237, 16, 16);
 }
