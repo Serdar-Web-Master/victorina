@@ -16,7 +16,6 @@ body {
 
 .quiz-container {
     width: clamp( 1px, 500px ,80%);
-    /* width: 500px; */
     margin: 50px auto;
     background-color: white;
     padding: 15px;
@@ -35,6 +34,9 @@ hr {
 }
 #question {
     margin-bottom: 15px;
+}
+h3 {
+    color: #00ffff;
 }
 
 .option {
@@ -57,4 +59,28 @@ hr {
 }
 .none {
     display: none;
+}
+
+
+.options div.correct {
+    background-color: green;
+}
+
+.options div.wrong {
+    background-color: rgb(237, 16, 16);
+}
+
+.options div.disabled {
+    pointer-events: none;
+}
+
+#answers-tracker {
+    display: flex;
+}
+#answers-tracker div{
+    width: 30px;
+    height: 30px;
+    background-color: #7b87a1;
+    border-radius: 50%;
+    margin-right: 10px;
 }
