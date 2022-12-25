@@ -16,12 +16,16 @@ body {
 
 .quiz-container {
     width: clamp( 1px, 500px ,80%);
-    margin: 50px auto;
+    margin: 30px auto;
     background-color: white;
     padding: 15px;
     border-radius: 3px
 }
 
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
 
 hr {
     display: block;
@@ -42,6 +46,8 @@ hr {
 
 #question {
     margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
 }
 h3 {
     color: #00ffff;

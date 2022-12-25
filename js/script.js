@@ -27,34 +27,34 @@ let indexOfQuestion, //индекс текущего вопроса
 const questions = [
    {
       flag:"./img/russiya.png",
-      question: "Как в JavaScript вычислить процент от числа",
+      question: "Угадай Страну по Флагу",
       options: [
-         "Так в JavaScript нельзя делать",
-         "Оператор : %",
-         "Умножить на кол во процентов и разделить на 100",
-         "Вызвать метод findPrecent()",
-      ],
-      rightAnswer: 2
-   },
-   {
-      flag:"./img/greatbritan.png",
-      question: "Как в JavaScript вычислить процент от числа 222",
-      options: [
-         "Так в JavaScript нельзя делать 222",
-         "Оператор : % 222",
-         "Умножить на кол во процентов и разделить на 100 222",
-         "Вызвать метод findPrecent() 222",
+         "Франция",
+         "Россия",
+         "Украина",
+         "Казахстан",
       ],
       rightAnswer: 1
    },
    {
-      flag:"./img/usa.png",
-      question: "Как в JavaScript вычислить процент от числа 3333",
+      flag:"./img/greatbritan.png",
+      question: "Угадай Страну по Флагу",
       options: [
-         "Так в JavaScript нельзя делать 222",
-         "Оператор : % 222",
-         "Умножить на кол во процентов и разделить на 100 222",
-         "Вызвать метод findPrecent() 222",
+         "Чехия",
+         "Словакия",
+         "Румыния",
+         "Великобритания",
+      ],
+      rightAnswer: 3
+   },
+   {
+      flag:"./img/usa.png",
+      question: "Угадай Страну по Флагу",
+      options: [
+         "Канада",
+         "США",
+         "Япония",
+         "Германия",
       ],
       rightAnswer: 1
    },
