@@ -26,6 +26,7 @@ let indexOfQuestion, //индекс текущего вопроса
 
 const questions = [
    {
+      flag:"./img/russiya.png",
       question: "Как в JavaScript вычислить процент от числа",
       options: [
          "Так в JavaScript нельзя делать",
@@ -36,6 +37,7 @@ const questions = [
       rightAnswer: 2
    },
    {
+      flag:"./img/greatbritan.png",
       question: "Как в JavaScript вычислить процент от числа 222",
       options: [
          "Так в JavaScript нельзя делать 222",
@@ -46,6 +48,7 @@ const questions = [
       rightAnswer: 1
    },
    {
+      flag:"./img/usa.png",
       question: "Как в JavaScript вычислить процент от числа 3333",
       options: [
          "Так в JavaScript нельзя делать 222",
@@ -60,7 +63,15 @@ const questions = [
 
 numberOfAllQuestion.innerHTML = questions.length //выводим кол во всех вопросов
 
+const imgBlock = document.querySelector('.img__block');
+
+const flagImg = document.querySelector('.flag__img');
+
+
 const load = () => {
+
+   flagImg.src = `${questions[indexOfQuestion].flag}`
+
    question.innerHTML = questions[indexOfQuestion].question; // сам вопрос
 
    option1.innerHTML = questions[indexOfQuestion].options[0];
