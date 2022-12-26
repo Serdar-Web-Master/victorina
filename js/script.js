@@ -82,10 +82,12 @@ const checkAnswer = el => {
    if(el.target.dataset.id == questions[indexOfQuestion].rightAnswer) {
       el.target.classList.add("correct");
       updateAnswerTracker("correct");
+      audioCorrect ();
       score++;
    } else {
       el.target.classList.add("wrong");
       updateAnswerTracker("wrong");
+      audioWrong ();
    }
    disabledOptoins();
 }
@@ -146,7 +148,6 @@ btnTryAgain.addEventListener("click",tryAgain);
 window.addEventListener("load",()=>{
    randomQuestion();
    answerTracker();
-   // sensorcheck();
 })
 
 function sensorcheck (params) {
@@ -182,3 +183,22 @@ function sensorcheck (params) {
       console.log(" ne ponyal");
    }
 };
+
+function audioCorrect () {
+const audio = new Audio();
+audio.preload = 'auto';
+audio.src = 'zwuki/prawilniy_otwet.mp3';
+audio.play();
+}
+
+
+
+function audioWrong () {
+const audio = new Audio();
+audio.preload = 'auto';
+audio.src = 'zwuki/ne_prawilniy_otwet.mp3';
+audio.play();
+}
+
+
+
