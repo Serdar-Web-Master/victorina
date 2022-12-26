@@ -16,7 +16,7 @@ body {
 
 .quiz-container {
     width: clamp( 1px, 500px ,95%);
-    margin: 30px auto;
+    margin: 10px auto;
     background-color: white;
     padding: 15px;
     border-radius: 3px
@@ -147,5 +147,5 @@ p {
 }
 
 .green {
-    background-color: #59efef;
+    background-color: #23eaea;
 }
