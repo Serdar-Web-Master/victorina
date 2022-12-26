@@ -1,4 +1,6 @@
 
+import {questions} from "./vars.js"
+
 // All answer option 
 const option1 = document.querySelector('.option1'),
       option2 = document.querySelector('.option2'),
@@ -24,56 +26,15 @@ let indexOfQuestion, //индекс текущего вопроса
             numberOfAllQuestion2 = document.getElementById("number-of-all-question-2"),
             btnTryAgain = document.getElementById("btn-try-again");
 
-const questions = [
-   {
-      flag:"./img/russiya.png",
-      question: "Угадай Страну по Флагу",
-      options: [
-         "Франция",
-         "Россия",
-         "Украина",
-         "Казахстан",
-      ],
-      rightAnswer: 1
-   },
-   {
-      flag:"./img/greatbritan.png",
-      question: "Угадай Страну по Флагу",
-      options: [
-         "Чехия",
-         "Словакия",
-         "Румыния",
-         "Великобритания",
-      ],
-      rightAnswer: 3
-   },
-   {
-      flag:"./img/usa.png",
-      question: "Угадай Страну по Флагу",
-      options: [
-         "Канада",
-         "США",
-         "Япония",
-         "Германия",
-      ],
-      rightAnswer: 1
-   },
-];
-
 
 numberOfAllQuestion.innerHTML = questions.length //выводим кол во всех вопросов
 
 const imgBlock = document.querySelector('.img__block');
-
 const flagImg = document.querySelector('.flag__img');
 
-
 const load = () => {
-
    flagImg.src = `${questions[indexOfQuestion].flag}`
-
    question.innerHTML = questions[indexOfQuestion].question; // сам вопрос
-
    option1.innerHTML = questions[indexOfQuestion].options[0];
    option2.innerHTML = questions[indexOfQuestion].options[1];
    option3.innerHTML = questions[indexOfQuestion].options[2];
@@ -112,6 +73,7 @@ const randomQuestion = () => {
       }
    };
    completedAnswers.push(indexOfQuestion);
+   sensorcheck();
 };
 
 const checkAnswer = el => {
@@ -184,5 +146,39 @@ btnTryAgain.addEventListener("click",tryAgain);
 window.addEventListener("load",()=>{
    randomQuestion();
    answerTracker();
+   // sensorcheck();
 })
 
+function sensorcheck (params) {
+
+   // const sensor = document.querySelectorAll('.sensor');
+   // sensor.forEach(item => {
+   //    item.style.backgroundColor = "#86f1f1"
+   // })
+   
+   const sensor1 = document.querySelector('.sensor1');
+   const sensor2 = document.querySelector('.sensor2');
+   const sensor3 = document.querySelector('.sensor3');
+   const sensor4 = document.querySelector('.sensor4');
+
+   sensor1.classList.remove("green");
+   sensor2.classList.remove("green");
+   sensor3.classList.remove("green");
+   sensor4.classList.remove("green");;
+
+   if ( questions[indexOfQuestion].rightAnswer == 0) {
+      sensor1.classList.add("green");
+   }
+   if ( questions[indexOfQuestion].rightAnswer == 1) {
+      sensor2.classList.add("green");
+   }
+   if ( questions[indexOfQuestion].rightAnswer == 2) {
+      sensor3.classList.add("green");
+   }
+   if ( questions[indexOfQuestion].rightAnswer == 3) {
+      sensor4.classList.add("green");
+   }
+   else {
+      console.log(" ne ponyal");
+   }
+};
