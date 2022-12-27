@@ -56,15 +56,15 @@ const questions = [
       rightAnswer: 0
    },
    {
-      flag:"./img/azer.png",
+      flag:"./img/kitay.png",
       question: "Угадай Страну по Флагу",
       options: [
          "Турция",
          "Беларусь",
-         "Азербайджан",
+         "Китай",
          "Армения",
       ],
-      rightAnswer: 2
+      rightAnswer: 0
    },
 ];
 
