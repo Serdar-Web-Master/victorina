@@ -64,7 +64,7 @@ const questions = [
          "Китай",
          "Армения",
       ],
-      rightAnswer: 0
+      rightAnswer: 2
    },
 ];
 
