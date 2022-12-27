@@ -33,10 +33,31 @@ const questions = [
       ],
       rightAnswer: 1
    },
+   {
+      flag:"./img/armeniya.png",
+      question: "Угадай Страну по Флагу",
+      options: [
+         "Канада",
+         "Беларусь",
+         "Грузия",
+         "Армения",
+      ],
+      rightAnswer: 3
+   },
+   {
+      flag:"./img/tursia.png",
+      question: "Угадай Страну по Флагу",
+      options: [
+         "Турция",
+         "Беларусь",
+         "Грузия",
+         "Армения",
+      ],
+      rightAnswer: 0
+   },
 ];
 
 const a = "vars";
-
-const b = "vars222"
+const b = "vars222";
 
 export { a, b , questions} ;
