@@ -55,6 +55,17 @@ const questions = [
       ],
       rightAnswer: 0
    },
+   {
+      flag:"./img/azer.png",
+      question: "Угадай Страну по Флагу",
+      options: [
+         "Турция",
+         "Беларусь",
+         "Азербайджан",
+         "Армения",
+      ],
+      rightAnswer: 2
+   },
 ];
 
 const a = "vars";
