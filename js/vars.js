@@ -66,8 +66,19 @@ const questions = [
       ],
       rightAnswer: 2
    },
-];
-
+   {
+      flag:"./img/gruziya.png",
+      question: "Угадай Страну по Флагу",
+      options: [
+         "Турция",
+         "Беларусь",
+         "Китай",
+         "Грузия",
+      ],
+      rightAnswer: 3
+   },
+   
+];   
 const a = "vars";
 const b = "vars222";
 
